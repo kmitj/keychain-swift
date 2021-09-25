@@ -4,11 +4,16 @@ import PackageDescription
 let package = Package(
     name: "keychain-swift",
     products: [
-        .library(name: "KeychainSwift", targets: ["keychain-swift"]),
+        .library(name: "KeychainSwift", targets: ["KeychainSwift"]),
+    ],
+    dependencies: [
     ],
     targets: [
-        .target(name: "KeychainSwift", path: "Sources"),
-        .testTarget(name: "KeychainSwiftTests", dependencies: ["KeychainSwift"], path: "Tests")
-    ],
-    swiftLanguageVersions: [.v5]
+        .target(name: "KeychainSwift", dependencies: [], path: "Sources"),
+        .testTarget(
+            name: "KeychainSwiftTests", 
+            dependencies: ["KeychainSwift"],
+            exclude: ["ClearTests.swift"]
+        )
+    ]
 )
