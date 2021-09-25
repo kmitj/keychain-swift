@@ -2,9 +2,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "KeychainSwift",
+    name: "keychain-swift",
     products: [
-        .library(name: "KeychainSwift", targets: ["KeychainSwift"]),
+        .library(name: "KeychainSwift", targets: ["keychain-swift"]),
     ],
     targets: [
         .target(name: "KeychainSwift", path: "Sources"),
