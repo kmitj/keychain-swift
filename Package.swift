@@ -6,14 +6,9 @@ let package = Package(
     products: [
         .library(name: "KeychainSwift", targets: ["KeychainSwift"]),
     ],
-    dependencies: [
-    ],
     targets: [
-        .target(name: "KeychainSwift", dependencies: [], path: "Sources"),
-        .testTarget(
-            name: "KeychainSwiftTests", 
-            dependencies: ["KeychainSwift"],
-            exclude: ["ClearTests.swift"]
-        )
-    ]
+        .target(name: "KeychainSwift", path: "Sources"),
+        .testTarget(name: "KeychainSwiftTests", dependencies: ["KeychainSwift"], path: "Tests")
+    ],
+    swiftLanguageVersions: [.v5]
 )
