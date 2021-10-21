@@ -9,11 +9,6 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .target(name: "KeychainSwift", dependencies: [], path: "Sources", resources: [.process("Info.plist")),
-        .testTarget(
-            name: "KeychainSwiftTests", 
-            dependencies: ["KeychainSwift"],
-            exclude: ["ClearTests.swift"]
-        )
+         .target(name: "KeychainSwift", path: "Sources"),
     ]
 )
